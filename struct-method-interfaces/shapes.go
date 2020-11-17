@@ -2,13 +2,17 @@ package main
 
 import "math"
 
+type Shape interface {
+	Area() float64
+}
+
 type Rectangle struct {
 	Width  float64
 	Heigth float64
 }
 
 func (r Rectangle) Area() float64 {
-	return 0
+	return r.Width * r.Heigth
 }
 
 type Circle struct {
