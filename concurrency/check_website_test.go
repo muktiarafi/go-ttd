@@ -6,10 +6,7 @@ import (
 )
 
 func mockWebsiteChecker(url string) bool {
-	if url == "anjay.com" {
-		return false
-	}
-	return true
+	return url != "anjay.com"
 }
 
 func TestCheckWebsite(t *testing.T) {
